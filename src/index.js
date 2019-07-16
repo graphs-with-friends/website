@@ -138,7 +138,7 @@ function ticked () {
 restart()
 
 const updateInterval = setInterval(() => {
-  if (nodes.length === 50) {
+  if (nodes.length === 100) {
     return clearInterval(updateInterval)
   }
 
