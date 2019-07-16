@@ -154,7 +154,9 @@ if (process.env.NODE_ENV === 'development') {
       reportFilename: path.join(__dirname, 'reports', 'bundle-size.html'),
       openAnalyzer: false
     }),
-    new ManifestPlugin(),
+    new ManifestPlugin({
+      basePath: '/website'
+    }),
     //new WebappWebpackPlugin('./src/assets/favicon.svg')
   )
   config.optimization = {
