@@ -59,14 +59,22 @@ body {
 
 #intro {
   position: absolute;
-  width: 50vw;
   top: 50px;
-  left: 50%;
-  margin-left: -25vw;
+  left: 20px;
+  right: 20px;
   background: rgba(255, 255, 255, 0.9);
   border: 10px solid rgba(0, 0, 0, 0.8);
   padding: 50px 50px 0 50px;
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  #intro {
+    width: 500px;
+    right: auto;
+    left: 50%;
+    margin-left: -320px;
+  }
 }
 
 #intro p {
