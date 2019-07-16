@@ -1,0 +1,72 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "description": "The Graphs With Friends website",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "webpack",
+    "prepublish": "npm run clean && npm run build",
+    "test": "node test/index.js",
+    "start": "webpack-dev-server --port 37283",
+    "lint": "standard",
+    "deploy": "npm run prepublish && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graphs-with-friends/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/graphs-with-friends/website/issues"
+  },
+  "homepage": "https://github.com/graphs-with-friends/website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "assets-webpack-plugin": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-istanbul": "^5.1.0",
+    "case-sensitive-paths-webpack-plugin": "^2.2.0",
+    "create-index": "^2.3.0",
+    "css-loader": "^3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "favicons-webpack-plugin": "0.0.9",
+    "file-loader": "^4.0.0",
+    "gh-pages": "^2.0.1",
+    "html-webpack-plugin": "^3.0.4",
+    "http-server": "^0.11.1",
+    "image-webpack-loader": "^5.0.0",
+    "json-loader": "^0.5.4",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "normalize.css": "^8.0.0",
+    "npm-run-all": "^4.1.5",
+    "react-hot-loader": "^4.6.1",
+    "react-transform-catch-errors": "^1.0.2",
+    "redbox-react": "^1.3.1",
+    "responsive-loader": "^1.1.0",
+    "standard": "^13.0.2",
+    "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.0",
+    "terser-webpack-plugin": "^1.2.1",
+    "webapp-webpack-plugin": "^2.6.0",
+    "webpack": "^4.27.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.0.0",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-hot-middleware": "^2.12.2",
+    "webpack-livereload-plugin": "^2.1.1",
+    "webpack-manifest-plugin": "^2.0.4"
+  },
+  "dependencies": {
+    "d3": "^5.9.7"
+  }
+}
