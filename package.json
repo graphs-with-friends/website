@@ -10,7 +10,8 @@
     "test": "node test/index.js",
     "start": "webpack-dev-server --port 37283",
     "lint": "standard",
-    "deploy": "npm run prepublish && gh-pages -d dist"
+    "deploy": "npm run prepublish && gh-pages -d dist",
+    "ipfs": "NODE_ENV=production npm run build && cd dist && ipfs add -r ."
   },
   "repository": {
     "type": "git",

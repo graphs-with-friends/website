@@ -9,6 +9,8 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const WebappWebpackPlugin = require('webapp-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 
+const PREFIX = process.env.NODE_ENV === 'production' ? undefined : '/website'
+
 const config = {
   mode: process.env.NODE_ENV || 'production',
   entry: {
@@ -17,7 +19,7 @@ const config = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: '/website'
+    publicPath: PREFIX
   },
   plugins: [
     new CaseSensitivePathsPlugin(),
@@ -155,7 +157,7 @@ if (process.env.NODE_ENV === 'development') {
       openAnalyzer: false
     }),
     new ManifestPlugin({
-      basePath: '/website'
+      basePath: PREFIX
     }),
     //new WebappWebpackPlugin('./src/assets/favicon.svg')
   )
